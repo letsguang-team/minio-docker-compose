@@ -1,0 +1,2 @@
+#!/bin/bash
+export $(cat ./minio.env | xargs) && docker-compose -f ../../docker-compose.yml --project-directory . "$@"
