@@ -8,6 +8,7 @@ services:
     ports:
       - "${MINIO_PORT}:9000"
     command: server /data
+    restart: always
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
       interval: 30s
