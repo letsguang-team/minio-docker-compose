@@ -16,3 +16,8 @@ services:
       retries: 3
     env_file:
       - minio.env
+    deploy:
+      resources:
+        limits:
+          cpus: '0.75'
+          memory: 750M
